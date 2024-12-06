@@ -1,0 +1,78 @@
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1500;    
+    font-size: large;
+    margin-left: 3vw;
+    user-select: none;
+}
+
+.BannerMainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    padding: 20px 0px;
+    background-color:  rgb(233, 231, 231);
+    user-select: none;
+}
+
+.BannerMainDiv .BannerDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 98vw;
+    height: 50vh;
+    cursor: pointer;
+}
+
+.BannerMainDiv .BannerDiv .BannerBtn{
+    width: 98vw;
+    height: 50vh;
+    border: none;
+    cursor: pointer;
+}
+
+.BannerMainDiv .BannerDiv .BannerBtn img{
+    width: 98vw;
+    height: 50vh;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .BannerMainDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        width: 99vw;
+        height: 25vh;
+        padding: 10px 0px;
+        background-color:  rgb(233, 231, 231);
+        user-select: none;
+    }
+
+    .BannerMainDiv .BannerDiv .BannerBtn{
+        width: 97vw;
+        height: 25vh;
+        border: none;
+    }
+
+    .BannerMainDiv .BannerDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        width: 97vw;
+        height: 25vh;
+        cursor: pointer;
+    }
+
+    .BannerMainDiv .BannerDiv .BannerBtn img{
+        width: 97vw;
+        height: 25vh;
+    }
+    
+}

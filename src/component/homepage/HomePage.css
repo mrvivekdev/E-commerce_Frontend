@@ -1,0 +1,4 @@
+.MainHomeDiv{
+    display: flex;
+    flex-direction: column;
+}

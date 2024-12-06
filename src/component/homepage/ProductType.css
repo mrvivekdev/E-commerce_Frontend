@@ -1,0 +1,60 @@
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1500;    
+    font-size: xx-large;
+    margin-left: 3vw;
+}
+
+.MainProductDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 98.8vw;
+    background-color:  rgb(233, 231, 231);
+}
+
+.MainProductDiv .SecondDiv{
+    display: flex;
+    flex-direction: row;
+    height: 85%;
+    width: 97%;
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    h2{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 1500;    
+        font-size: x-large;
+        margin-left: 3vw;
+    }
+
+    .MainProductDiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 98.8vw;
+        background-color:  rgb(233, 231, 231);
+    }
+
+    .MainProductDiv .SecondDiv{
+        display: flex;
+        flex-direction: row;
+        height: 87%;
+        width: 88%;
+        background-color: white;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+}

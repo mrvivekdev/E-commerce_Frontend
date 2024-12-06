@@ -1,0 +1,76 @@
+.MainDiv{
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+    background-image: none;
+    background-color: white;
+}
+
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1500;    
+    font-size: xx-large;
+    margin-left: 3vw;
+}
+
+.CategoryListDiv{
+    display: flex;
+    justify-content: space-evenly;
+    height: 170px;
+    width: 98.8vw;
+    margin: 10px;
+    /* border: 2px solid black; */
+}
+
+.CategoryListDiv .CategoryListBtn{
+    margin-top: 10px;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.CategoryListDiv .CategoryListBtn:hover{
+    background-color: rgb(233, 231, 231);
+}
+
+.CategoryListDiv .CategoryListBtn .CategoryListImg{
+    height: 80px;
+    width: 80px;
+}
+
+.CategoryListDiv .CategoryListBtn h3{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    h2{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 1500;    
+        font-size: small;
+        margin-left: 5vw;
+    }
+
+    .CategoryListDiv{
+        display: flex;
+        justify-content: space-evenly;
+        height: 170px;
+        width: 98.8vw;
+        margin: 10px;
+        overflow-x: auto;
+        /* border: 2px solid black; */
+    }
+
+    .CategoryListDiv .CategoryListBtn{
+        margin: 10px;
+        margin-top: 10px;
+        height: 150px;
+        width: 150px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 2px;
+    }
+}

@@ -1,0 +1,109 @@
+.MainProductAddDiv{
+    height: 900px;
+    width: 100vw; 
+    
+}
+
+.CenterDiv{
+    display: flex;
+    flex-direction: row;
+    height: 900px;
+    width: 100vw;
+    background-color: rgb(233, 231, 231);
+}
+
+.LeftDiv{
+    height: 900px;
+    width: 20vw;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.RightDiv{
+    display: flex;
+    flex-direction: column;
+    height: 820px;
+    width: 74vw;
+    padding: 40px;
+    margin: 0px;
+    margin-left: 20.5vw;
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.RightDiv .InputFild{
+    height: 30px;
+    width: 1000px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.RightDiv p{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 2px;
+    width: 1000px;
+}
+
+.RightDiv .Summery{
+    height: 200px;
+    width: 1000px;
+    padding: 10px;
+    margin-top: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+h3{
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.RightDiv .Range{
+    width: 1000px;
+    margin: 20px 0;
+    margin-top: 0px;
+    color: black;
+    background: transparent;
+}
+
+.RightDiv .Dropdown{
+    height: 45px;
+    width: 1000px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.RightDiv .SubmitDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 70px;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+
+.RightDiv .SubmitDiv button{
+    height: 50px;
+    width: 150px;
+    margin: 0px;
+    font-size: large;
+    background-color: #2196F3;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.RightDiv .SubmitDiv button:hover{
+    border: 2px solid black;
+    border-radius: 5px;
+}

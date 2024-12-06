@@ -1,0 +1,74 @@
+
+
+.MainProductButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    padding: 10px;
+    margin: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.MainProductButton:hover {
+    background-color: rgba(233, 231, 231, 0.487);
+}
+
+.ButtonImage {
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.MainProductButton h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.MainProductButton h5 {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+}
+
+.PriceDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.DiscountClass {
+    color: #ff5722;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.PriceShow {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    
+
+}
