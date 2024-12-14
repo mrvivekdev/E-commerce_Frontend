@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import LocomotiveScroll from "locomotive-scroll"
 
 import HomePage from './component/homepage/HomeScreen'
 import SignupPage from './component/login_and_signup/SignupPage'
@@ -10,6 +11,10 @@ import AccountSetting from './component/userInterface/AccountSetting';
 import TopNavBar from './component/homepage/TopNavBar';
 
 function App() {
+
+  useState(() => {
+    const scroll = new LocomotiveScroll();
+  }, []);
 
   return (
     <>
