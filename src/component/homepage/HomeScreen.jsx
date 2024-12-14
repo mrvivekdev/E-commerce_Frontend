@@ -6,12 +6,8 @@ import './HomePage.css'
 
 import Category from './CategoryBar'
 import TopNavBar from "./TopNavBar"
-import LoginPage from '../login_and_signup/LoginPage';
-import SignupPage from '../login_and_signup/SignupPage';
 import HomeBanner from './Banner';
-import ProductForm from '../userInterface/SallerAdd';
 import ProducType from './ProductType'
-import AccountSetting from '../userInterface/AccountSetting';
 
 export default function HomePage(props){
     // const {HomepageRender} = props;
@@ -74,7 +70,6 @@ export default function HomePage(props){
                 />
                 {/* <ProducType secondProduct={secondProductType} /> */}
             </div>
-        
         </>    
     )
 }

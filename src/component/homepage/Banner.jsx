@@ -2,7 +2,10 @@ import './Banner.css'
 
 export default function HomeBanner(props){
     const {banner} = props;
-    console.log(banner);
+
+    if (!banner) {
+        return <div className='Loarder'>Loading...</div>
+    }
 
     return(
         <>
