@@ -1,16 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
 import './HomePage.css'
 
-import Category from './CategoryBar'
+import { ManageContext } from '../../ContextStateManagement';
 import TopNavBar from "./TopNavBar"
 import HomeBanner from './Banner';
 import ProducType from './ProductType'
+import Category from './CategoryBar';
 
 export default function HomePage(props){
-    // const {HomepageRender} = props;
+
+    const {stateCookie, setStateCookie} = useContext(ManageContext);
 
     const [User, setUser] = useState(null)
     const [homepageData, setHomepageData] = useState({});
@@ -46,6 +48,7 @@ export default function HomePage(props){
         const cookie = Cookies.get('uid');
         if(cookie){
             setCookieSee(cookie);
+            setStateCookie(cookie);
         }
 
         if(cookie !== null){
