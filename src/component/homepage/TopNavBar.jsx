@@ -76,7 +76,7 @@ export default function TopNavBar(){
                     <Link style={{ textDecoration: 'none', color: 'black'}} to="/accountsetting">Account</Link>
                 </button>
                 <button className={`SaleBtn ControlBtn ${display}`} >
-                    <Link style={{ textDecoration: 'none', color: 'black' }} to="/accountsetting">Add A Product</Link>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to="/productform">Add A Product</Link>
                 </button>
                 <button className={`AccountBtn ControlBtn ${display}`} onClick={removeCookie} >Logout</button>
                 <button className={`ControlBtn ${displayNoneUser}`} >

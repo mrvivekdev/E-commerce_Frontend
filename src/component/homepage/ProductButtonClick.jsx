@@ -31,9 +31,13 @@ export default function ProducType(props){
         return <div className='Loarder'>Loading...</div>
     }
 
+    function handleClick(){
+        console.log(id)
+    }
+
     return(
         <>
-            <button className='MainProductButton'>
+            <button className='MainProductButton' onClick={handleClick}>
                 <img src={image} alt="" className='ButtonImage'/>
                 <h3>{name}</h3>
                 <h5>{productSummery}</h5>

@@ -1,0 +1,68 @@
+.OpenProductMainDiv{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.OpenProductMainDiv .SecondMainDivOpen{
+    display: flex;
+    height: 85vh;
+    width: 75vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3%;
+}
+
+.OpenProductMainDiv .SecondMainDivOpen .OpenImageDiv{
+    height: 75%;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 2%;
+}
+
+.OpenProductMainDiv .SecondMainDivOpen .OpenImageDiv .ProductImage{
+    height: 75%;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.OpenProductMainDiv .SecondMainDivOpen .OpenRightDiv{
+    display: flex;
+    height: 90%;
+    width: 60%;
+    border: 1px solid black;
+    padding: 2%;
+}
+
+.OpenProductMainDiv .SecondMainDivOpen .OpenRightDiv .OpenInfoDiv{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100%;
+    width: 75%;
+}
+
+.OpenProductMainDiv .SecondMainDivOpen .OpenRightDiv .OpenInfoDiv .OpenProductTital{
+    font-size: 1.7vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.OpenProductMainDiv .SecondMainDivOpen .OpenRightDiv .OpenOrderDiv{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 100%;
+    width: 25%;
+    margin-left: 1%;
+}

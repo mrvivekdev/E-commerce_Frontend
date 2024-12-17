@@ -30,6 +30,7 @@ export default function HomePage(props){
             const responce = await axios.post('/api/homepage/serve', postData);
             setHomepageData(responce.data);
         } 
+
         ApiCall();
         cookieCheck();
     }, [])

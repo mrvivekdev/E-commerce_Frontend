@@ -9,6 +9,7 @@ import OtpPage from './component/login_and_signup/OtpPage';
 import ProductForm from './component/userInterface/SallerAdd';
 import AccountSetting from './component/userInterface/AccountSetting';
 import TopNavBar from './component/homepage/TopNavBar';
+import OpenProduct from './component/userInterface/OpenProduct'
 
 function App() {
 
@@ -24,15 +25,16 @@ function App() {
       {/* <OtpPage /> */}
       {/* <ProductForm /> */}
       {/* <AccountSetting /> */}
+      <OpenProduct />
 
-      <Routes> 
+      {/* <Routes> 
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/Singup" element={<SignupPage />} />
         <Route path="/otppage" element={<OtpPage />} />
         <Route path="/productform" element={<ProductForm />} />
         <Route path="/accountsetting" element={<AccountSetting />} />
-      </Routes>
+      </Routes> */}
     </>
   )
 }
