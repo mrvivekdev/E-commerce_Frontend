@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import './SignnupPage.css';
 import LoginPage from './LoginPage';
@@ -117,7 +118,7 @@ export default function SignupPage(){
                             required
                         />
                         <button onClick={HandelApiCall}>Signup</button>
-
+                        <p className="AlreadyAccount">Already have an Account? <Link className='AlreadyAccountLink' style={{ textDecoration: 'none', color: 'black' }} to="/login">Login</Link></p>
                     </div>
                 </div>
             </div>

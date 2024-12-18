@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
+
 import './ProductType.css'
 import ProductButtonClick from './ProductButtonClick';
+import { ProductLoader } from '../assetsComponent/Loader';
 
 export default function ProducType(props){
     const {propsProduct, typeName} = props
@@ -31,7 +33,7 @@ export default function ProducType(props){
     }, [propsProduct])
 
     if (!propsProduct || propsProduct.length === 0 && !dataSaveOne) {
-        return <div className='Loarder'>Loading...</div>
+        return <ProductLoader />
     }
 
     return(

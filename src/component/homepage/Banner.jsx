@@ -1,10 +1,12 @@
 import './Banner.css'
 
+import { ProductLoader } from '../assetsComponent/Loader';
+
 export default function HomeBanner(props){
     const {banner} = props;
 
     if (!banner) {
-        return <div className='Loarder'>Loading...</div>
+        return <ProductLoader />
     }
 
     return(

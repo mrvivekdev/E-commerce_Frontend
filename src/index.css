@@ -3,9 +3,11 @@ body{
     padding: 0px;
 }
 
-.Loarder{
-    margin: 20px;
-    padding: 15px;
-    font-size: medium;
-    font-weight: 600;
+.MainLoader{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }

@@ -69,6 +69,13 @@
     font-size: 22px;
 }
 
+.AlreadyAccount{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: black;
+}
+
 @media (max-width: 600px) {
     .MainDivAll{
         height: 100vh;

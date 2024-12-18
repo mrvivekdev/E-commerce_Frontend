@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
+
 import './ProductButtonClick.css'
+import { ProductLoader } from '../assetsComponent/Loader';
 
 export default function ProducType(props){
     const {product} = props;
 
     if (!product || product.length === 0) {
-        return <div className='Loarder'>Loading...</div>
+        return <ProductLoader />
     }
 
     const [id, setId] = useState();
@@ -32,6 +34,7 @@ export default function ProducType(props){
     }
 
     function handleClick(){
+        //  make a function to call api using product id...
         console.log(id)
     }
 

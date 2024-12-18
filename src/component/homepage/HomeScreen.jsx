@@ -4,13 +4,15 @@ import Cookies from 'js-cookie';
 
 import './HomePage.css'
 
+import { PageLoader } from '../assetsComponent/Loader';
 import { ManageContext } from '../../ContextStateManagement';
 import TopNavBar from "./TopNavBar"
 import HomeBanner from './Banner';
 import ProducType from './ProductType'
 import Category from './CategoryBar';
 
-export default function HomePage(props){
+
+export default function HomePage(){
 
     const {stateCookie, setStateCookie} = useContext(ManageContext);
 
@@ -57,6 +59,12 @@ export default function HomePage(props){
                 setUser(homepageData.user);
             }
         }
+    }
+
+    if(JSON.stringify(homepageData) === '{}'){
+        return <>
+            <PageLoader />
+        </>
     }
 
     return(

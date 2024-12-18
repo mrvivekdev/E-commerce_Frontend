@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 
 import './LoginPage.css';
 import OtpPage from './OtpPage';
@@ -70,6 +71,7 @@ export default function LoginPage(){
                             required
                         />
                         <button onClick={HandelApiCall}>Login</button>
+                        <p className="AlreadyAccount">Already have an Account? <Link style={{ textDecoration: 'none', color: 'black' }} to="/singup">Singup</Link></p>
 
                     </div>
                 </div>
