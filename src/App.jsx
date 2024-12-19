@@ -25,16 +25,16 @@ function App() {
       {/* <OtpPage /> */}
       {/* <ProductForm /> */}
       {/* <AccountSetting /> */}
-      <OpenProduct />
+      {/* <OpenProduct /> */}
 
-      {/* <Routes> 
+      <Routes> 
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/Singup" element={<SignupPage />} />
         <Route path="/otppage" element={<OtpPage />} />
         <Route path="/productform" element={<ProductForm />} />
         <Route path="/accountsetting" element={<AccountSetting />} />
-      </Routes> */}
+      </Routes>
     </>
   )
 }

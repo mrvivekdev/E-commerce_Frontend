@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 
 import "./AccountSetting.css"
 import TopNavBar from "../homepage/TopNavBar"
+import { ManageContext } from '../../ContextStateManagement';
 
-export default function AccountSetting(props){
-    const {user} = props;
+export default function AccountSetting(){
+
+    const {userData} = useContext(ManageContext);
 
     const [email, setEmail] = useState();
     const [fullname, setFullname] = useState();
@@ -13,14 +15,6 @@ export default function AccountSetting(props){
     const [updateFullname, setUpdateFullname] = useState();
     const [updatePhonenumber, setUpdatePhonenumber] = useState();
     const [serverData, setServerData] = useState({});
-
-    useEffect(()=>{
-        if(user){
-            setEmail(user.email)
-            setFullname(user.fullname)
-            setPhonenumber(user.phonenumber)       
-        }
-    }, [user])
 
     function nameChange(event){
         setUpdateFullname(event.target.value);
@@ -41,7 +35,7 @@ export default function AccountSetting(props){
             console.log('Axios error', error);
         }
     }
-    console.log(serverData);
+    console.log("serverDataUpdate",serverData);
 
     return(
         <>
@@ -49,10 +43,10 @@ export default function AccountSetting(props){
             <h2>Basic Information</h2>
             <div className="BasicInfo">
 
-                <p className="InfoP" >Email:- {email || "No email found"}</p>
+                <p className="InfoP" >Email:- {userData.email || "No email found"}</p>
                 <p className="InfoStar">*email cannot be change if you want to change you email than delete this account and creat new one.</p>
                
-                <p className="InfoP" >Fullname:- {fullname || "No name found"}</p>
+                <p className="InfoP" >Fullname:- {userData.fullname || "No name found"}</p>
                 <p className="InfoStar SpaceInfo">*your name can be change but your resent perchat gonna have your old name.</p>
                 <input 
                     className="InputChange"
@@ -63,7 +57,7 @@ export default function AccountSetting(props){
                     placeholder="New Fullname"
                 />
 
-                <p className="InfoP" >PhoneNumber:- {phonenumber || "No number found"}</p>
+                <p className="InfoP" >PhoneNumber:- {userData.phonenumber || "No number found"}</p>
                 <p className="InfoStar SpaceInfo">*your phonenumber can be change but change after gatting all of the your ordered pkg.</p>
                 <input 
                     className="InputChange" 

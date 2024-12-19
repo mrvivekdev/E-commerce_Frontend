@@ -14,7 +14,7 @@ import Category from './CategoryBar';
 
 export default function HomePage(){
 
-    const {stateCookie, setStateCookie} = useContext(ManageContext);
+    const {stateCookie, setStateCookie, setUserData} = useContext(ManageContext);
 
     const [User, setUser] = useState(null)
     const [homepageData, setHomepageData] = useState({});
@@ -45,6 +45,7 @@ export default function HomePage(){
             setSecondProductType(homepageData.SecondProductFind)
         }
 
+        setUserData(homepageData.user)
     }, [homepageData])
 
     function cookieCheck(){
@@ -60,7 +61,7 @@ export default function HomePage(){
             }
         }
     }
-
+    
     if(JSON.stringify(homepageData) === '{}'){
         return <>
             <PageLoader />
