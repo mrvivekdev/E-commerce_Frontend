@@ -37,7 +37,7 @@ export default function ProducType(props){
     }
 
     return(
-        <>
+        <>      
             <h2>{typeName}</h2>
             <div className='MainProductDiv'>    
                 <div className="SecondDiv">

@@ -20,15 +20,15 @@
 .OpenProductMainDiv .SecondMainDivOpen .OpenImageDiv{
     height: 75%;
     width: 40%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
     margin-right: 2%;
 }
 
 .OpenProductMainDiv .SecondMainDivOpen .OpenImageDiv .ProductImage{
-    height: 75%;
-    width: 40%;
-    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid black; */
     border-radius: 5px;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .OpenProductMainDiv .SecondMainDivOpen .OpenRightDiv .OpenInfoDiv .OpenProductTital{
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 95%;
     overflow: hidden;
@@ -62,7 +62,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 95%;
     margin-top: 6%;
-
+    margin-bottom: 6%;
 }
 
 .OpenColorBox{

@@ -1,26 +1,37 @@
-import './OpenProduct.css'
+import { useLocation } from 'react-router-dom';
 
+import './OpenProduct.css'
+import { PageLoader } from '../assetsComponent/Loader';
 import TopNavBar from "../homepage/TopNavBar"
 
 export default function OpenProduct(){
+
+    const location = useLocation();
+    const {imageUrl, productTital, productSummary, productPrice} = location.state
+    console.log('imageUrl:', imageUrl);
+    console.log('productTital:', productTital); 
+    console.log('productSummary:', productSummary);
+    console.log('productPrice:', productPrice);
+
+    // if(!imageUrl || !productTital || !productSummary || !productPrice){ 
+    //     return (<PageLoader />)
+    // }
+    
     return <>
         <TopNavBar />
 
         <div className="OpenProductMainDiv">
             <div className="SecondMainDivOpen">
                 <div className="OpenImageDiv">
-                    <img src="" alt="ProductImage" className="ProductImage" />
+                    <img src={imageUrl} alt="ProductImage" className="ProductImage" />
                 </div>
                 <div className="OpenRightDiv">
                     <div className="OpenInfoDiv">
-                        <b className="OpenProductTital">Google Pixel 8 Pro (Bay, 128 GB)  (12 GB RAM)#JustHere</b>
+                        <b className="OpenProductTital">{productTital}</b>
                         <span className="OpenProductSummary">
-                            12 GB RAM | 128 GB ROM
-                            17.02 cm (6.7 inch) Full HD+ AMOLED Display
-                            50MP + 48MP + 48MP | 10.5MP Front Camera
-                            5050 mAh Battery
-                            Tensor G3 Processor
+                            {productSummary}
                         </span>
+                        <b className="OpenProductTital">₹ {productPrice}</b>
                         <div className="OpenColorBox">
                             info adding is coming soon!
                         </div>

@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 import './ProductButtonClick.css'
 import { ProductLoader } from '../assetsComponent/Loader';
+import OpenProduct from '../userInterface/OpenProduct.jsx'
+
 
 export default function ProducType(props){
     const {product} = props;
 
-    if (!product || product.length === 0) {
-        return <ProductLoader />
-    }
+    const navigate = useNavigate();
 
     const [id, setId] = useState();
     const [image, setImage] = useState();
@@ -19,23 +20,35 @@ export default function ProducType(props){
     const [productSummery, setProductSummery] = useState();
 
     useEffect(()=>{
-        setId(product._id),
-        setImage(product.Images),
-        setName(product.ProductName),
-        setDiscount(product.Discount),
-        setPrice(product.Price),
-        setType(product.Type),
-        setProductSummery(product.ProductSummery)
+        if(product){
+            setId(product._id),
+            setImage(product.Images),
+            setName(product.ProductName),
+            setDiscount(product.Discount),
+            setPrice(product.Price),
+            setType(product.Type),
+            setProductSummery(product.ProductSummery)
+        }
     
     }, [product])
+
+    if (!product || product.length === 0) {
+        return <ProductLoader />
+    }
 
     if (!id || !image || !name || !discount || !price || !type || !productSummery) {
         return <div className='Loarder'>Loading...</div>
     }
 
     function handleClick(){
-        //  make a function to call api using product id...
-        console.log(id)
+        navigate("/openproduct", { 
+            state: { 
+                imageUrl: image, 
+                productTital: name, 
+                productSummary: productSummery, 
+                productPrice: price 
+            }
+        })
     }
 
     return(

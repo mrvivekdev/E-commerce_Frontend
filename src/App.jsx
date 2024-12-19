@@ -34,6 +34,7 @@ function App() {
         <Route path="/otppage" element={<OtpPage />} />
         <Route path="/productform" element={<ProductForm />} />
         <Route path="/accountsetting" element={<AccountSetting />} />
+        <Route path="/openproduct" element={<OpenProduct />} />
       </Routes>
     </>
   )
