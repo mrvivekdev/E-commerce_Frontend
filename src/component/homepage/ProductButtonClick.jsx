@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 import './ProductButtonClick.css'
 import { ProductLoader } from '../assetsComponent/Loader';
-import OpenProduct from '../userInterface/OpenProduct.jsx'
-
 
 export default function ProducType(props){
     const {product} = props;

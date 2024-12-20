@@ -7,15 +7,11 @@ import TopNavBar from "../homepage/TopNavBar"
 export default function OpenProduct(){
 
     const location = useLocation();
-    const {imageUrl, productTital, productSummary, productPrice} = location.state
-    console.log('imageUrl:', imageUrl);
-    console.log('productTital:', productTital); 
-    console.log('productSummary:', productSummary);
-    console.log('productPrice:', productPrice);
+    const {imageUrl, productTital, productSummary, productPrice} = location.state;
 
-    // if(!imageUrl || !productTital || !productSummary || !productPrice){ 
-    //     return (<PageLoader />)
-    // }
+    if(!imageUrl || !productTital || !productSummary || !productPrice){ 
+        return (<PageLoader />)
+    }
     
     return <>
         <TopNavBar />

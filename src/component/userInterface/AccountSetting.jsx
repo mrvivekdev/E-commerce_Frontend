@@ -6,6 +6,7 @@ import "./AccountSetting.css"
 import TopNavBar from "../homepage/TopNavBar"
 import { ManageContext } from '../../ContextStateManagement';
 
+
 export default function AccountSetting(){
 
     const {userData, setStateCookie, setUserData} = useContext(ManageContext);
@@ -19,6 +20,10 @@ export default function AccountSetting(){
     const [updateFullname, setUpdateFullname] = useState();
     const [updatePhonenumber, setUpdatePhonenumber] = useState();
     const [serverData, setServerData] = useState({});
+
+    if(!userData){
+        return (<ProductLoader />)
+    }
 
     // Changing delivery information
     function addressChange(event){
@@ -131,7 +136,7 @@ export default function AccountSetting(){
             <h2>Delivery Information</h2>
             <div className="DeliveryInfo">
 
-                <p className="InfoP" >Delivery Address: {"Not Found!"}</p>
+                <p className="InfoP" >Delivery Address: {userData.address || "Not Found!"}</p>
                 <input 
                     className="InputChange" 
                     type="text" 
@@ -141,7 +146,7 @@ export default function AccountSetting(){
                     }}
                 />
 
-                <p className="InfoP" >Address Pincode Number:- {"Not Found!"}</p>
+                <p className="InfoP" >Address Pincode Number:- {userData.pincodeNumber || "Not Found!"}</p>
                 <input 
                     className="InputChange" 
                     type="text" 
@@ -151,7 +156,7 @@ export default function AccountSetting(){
                     }}
                 />
 
-                <p className="InfoP" >City:- {"Not Found!"}</p>
+                <p className="InfoP" >City:- {userData.city || "Not Found!"}</p>
                 <input 
                     className="InputChange" 
                     type="text" 
@@ -161,7 +166,7 @@ export default function AccountSetting(){
                     }}
                 />
 
-                <p className="InfoP" >Street:- {"Not Found!"}</p>
+                <p className="InfoP" >Street:- {userData.street || "Not Found!"}</p>
                 <input 
                     className="InputChange" 
                     type="text" 
@@ -171,7 +176,7 @@ export default function AccountSetting(){
                     }}
                 />
 
-                <p className="InfoP" >House Number:- {"Not Found!"}</p>
+                <p className="InfoP" >House Number:- {userData.houseNumber || "Not Found!"}</p>
                 <input 
                     className="InputChange" 
                     type="text" 
@@ -181,7 +186,7 @@ export default function AccountSetting(){
                     }}
                 />
 
-                <p className="InfoP" >Landmark:- {"Not Found!"}</p>
+                <p className="InfoP" >Landmark:- {userData.landmark || "Not Found!"}</p>
                 <p className="InfoStar SpaceInfo">*This not compalcase to add.</p>
                 <input 
                     className="InputChange" 
