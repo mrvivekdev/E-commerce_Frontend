@@ -204,8 +204,7 @@ export default function AccountSetting(){
             <div className="PaymentInfo">
 
                 <p>Payment Methods is in testing!!!</p>
-            </div>
-            
+            </div> 
         </>
     )
 }   

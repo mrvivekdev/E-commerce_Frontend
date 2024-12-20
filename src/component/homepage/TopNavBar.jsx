@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
 
 import './TopNavBar.css';
+import { ManageContext } from '../../ContextStateManagement';
 import searchLogo from '../../assets/searchLogo.png';
 import MobileMenu from '../../assets/MobileViewMenu.png'
 
 export default function TopNavBar(){
 
-    const [mainUser, setMainUser] = useState(null);
+    const {stateCookie, setStateCookie, setUserData} = useContext(ManageContext);
+
     const [displayNoneUser, setDisplayNoneUser] = useState('DisplayFlex');
     const [display, setDisplay] = useState('DisplayNone'); 
     const [mobileMenu, setMobileMenu] = useState('DisplayNone');
@@ -37,6 +39,7 @@ export default function TopNavBar(){
 
     function removeCookie(){
         Cookies.remove('uid');
+        setUserData(null)
         window.location.reload();
     }
 
@@ -90,17 +93,17 @@ export default function TopNavBar(){
 
         <div className={`MobileMenu ${mobileMenu}`}>
             <button className={`MenuInsideBtn ${displayNoneUser}`} >
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/login">Login</Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/login">Login</Link>
             </button>
             <button className={`MenuInsideBtn ${displayNoneUser}`} >
-                <Link style={{ textDecoration: 'none', color: 'black' }} to="/singup">Singup</Link>
+                <Link style={{ textDecoration: 'none', color: 'white' }} to="/singup">Singup</Link>
             </button>
             <button className={`MenuInsideBtn ${display}`}>Cart</button>
             <button className={`MenuInsideBtn ${display}`}>Return</button>
             <button className={`MenuInsideBtn ${display}`}>Orders</button>
-            <button className={`MenuInsideBtn ${display}`} >Logout</button>
+            <button className={`MenuInsideBtn ${display}`} onClick={removeCookie} >Logout</button>
             <button className={`MenuInsideBtn ${display}`} >
-                <Link style={{ textDecoration: 'none', color: 'black'}} to="/accoutn">Account</Link>
+                <Link style={{ textDecoration: 'none', color: 'white'}} to="/accoutn">Account</Link>
             </button>
         </div>
 

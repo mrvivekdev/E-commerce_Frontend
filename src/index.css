@@ -11,3 +11,12 @@ body{
     align-items: center;
     justify-items: center;
 }
+
+@media (max-width: 600px){
+    h2{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 1500;    
+        font-size: large;
+        margin-left: 5vw;
+    }
+}

@@ -80,15 +80,15 @@
 }
 
 .SearchDiv .SearchBtn:hover{
-    background-color: white;
+    background-color: rgba(144, 144, 144, 0.655);
 }
 
-.SearchDiv .SearchBtn .SearchLogo:hover{
+/* .SearchDiv .SearchBtn .SearchLogo:hover{
     margin: 0px;
     height: 22px;
     width: 22px; 
     filter: invert(0)   
-}
+} */
 
 .ControlDiv{
     display: flex;
@@ -164,8 +164,16 @@
         border: 0px;
     }
 
+    .LogoMenuDiv .MobileViewMenuControl .MenuButton{
+        height: 35px;
+        width: 35px;
+        padding: 0px;
+        background-color: white;
+        border: 0px;
+    }
+
     .LogoMenuDiv .MobileViewMenuControl .MenuButton:focus{
-        border: 1px solid black;
+        border: .5px solid black;
         border-radius: 2px;
     }
 

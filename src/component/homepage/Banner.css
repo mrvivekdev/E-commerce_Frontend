@@ -11,7 +11,7 @@ h2{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     padding: 20px 0px;
     background-color:  rgb(233, 231, 231);
     user-select: none;
@@ -29,14 +29,14 @@ h2{
 
 .BannerMainDiv .BannerDiv .BannerBtn{
     width: 98vw;
-    height: 50vh;
+    height: 58vh;
     border: none;
     cursor: pointer;
 }
 
 .BannerMainDiv .BannerDiv .BannerBtn img{
     width: 98vw;
-    height: 50vh;
+    height: 58vh;
     cursor: pointer;
 }
 
@@ -73,6 +73,13 @@ h2{
     .BannerMainDiv .BannerDiv .BannerBtn img{
         width: 97vw;
         height: 25vh;
+    }
+
+    h2{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 1500;    
+        font-size: small;
+        margin-left: 5vw;
     }
     
 }
