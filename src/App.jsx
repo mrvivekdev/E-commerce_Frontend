@@ -10,6 +10,7 @@ import ProductForm from './component/userInterface/SallerAdd';
 import AccountSetting from './component/userInterface/AccountSetting';
 import TopNavBar from './component/homepage/TopNavBar';
 import OpenProduct from './component/userInterface/OpenProduct'
+import SearchProducts from './component/userInterface/SearchProducts';
 
 function App() {
 
@@ -26,8 +27,9 @@ function App() {
       {/* <ProductForm /> */}
       {/* <AccountSetting /> */}
       {/* <OpenProduct /> */}
+      <SearchProducts />
 
-      <Routes> 
+      {/* <Routes> 
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/Singup" element={<SignupPage />} />
@@ -35,7 +37,8 @@ function App() {
         <Route path="/productform" element={<ProductForm />} />
         <Route path="/accountsetting" element={<AccountSetting />} />
         <Route path="/openproduct" element={<OpenProduct />} />
-      </Routes>
+        <Route path="/searchproducts" element={<SearchProducts />} />
+      </Routes> */}
     </>
   )
 }

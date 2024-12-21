@@ -1,0 +1,76 @@
+.SearchProductShowBox{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 25%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: .5%;
+}
+
+.ImageDiv{
+    height: 96%;
+    width: 30%;
+    border: 1px solid black;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageShowBox{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.ShowBoxInfoDiv{
+    height: 96%;
+    width: 65%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.ShowTitel{
+    font-size: 2.7vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0px;
+    margin-top: 3%;
+}
+
+.ShowSummary{
+    margin: 0px;
+    font-size: 1.8vh;
+    height: 25%;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 3%;
+}
+
+.ShowPriceDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20%;
+}
+
+.ShowPriceShow{
+    font-size: 2.6vh;
+    margin: 0px;
+    margin-top: 1%;
+    margin-bottom: 0px;
+}
+
+.ShowDiscountClass{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.3vh;
+    margin: 0px;
+    margin-top: 10%;
+    margin-bottom: 0px;
+}

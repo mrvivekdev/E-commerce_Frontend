@@ -137,6 +137,11 @@ export default function ProductForm(props){
                                     name='ProductType'
                                     required
                                 >
+                                    <option value="Gaming Computer">Gaming Computer</option>
+                                    <option value="Laptops">Laptops</option>
+                                    <option value="CarReleted">Car Releted</option>
+                                    <option value="HomeReleted">Home Releted</option>
+                                    <option value="SmartPhone">Smart Phone</option>
                                     <option value="Fashion">Fashion</option>
                                     <option value="Elactronic">Elactronic</option>
                                     <option value="Beauty">Beauty</option>

@@ -107,3 +107,7 @@ h3{
     border: 2px solid black;
     border-radius: 5px;
 }
+
+.option{
+    overflow-y: auto;
+}
