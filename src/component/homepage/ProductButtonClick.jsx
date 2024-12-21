@@ -16,6 +16,7 @@ export default function ProducType(props){
     const [price, setPrice] = useState();
     const [type, setType] = useState();
     const [productSummery, setProductSummery] = useState();
+    const [ChangeImage, setChangeImage] = useState();
 
     useEffect(()=>{
         if(product){
@@ -30,6 +31,19 @@ export default function ProducType(props){
     
     }, [product])
 
+    useEffect(()=>{
+        if(image){
+            const envServerIp = import.meta.env.VITE_SERVER_IP;
+            const envServerPort = import.meta.env.VITE_SERVER_PORT;
+            const MergeServerConfig = `${envServerIp}${envServerPort}`
+
+            const SpliteImage = image.split("http://localhost:9090")[1];
+            const margeImage = `${MergeServerConfig}${SpliteImage}`;
+            setChangeImage(margeImage)
+        }
+
+    }, [image])
+
     if (!product || product.length === 0) {
         return <ProductLoader />
     }
@@ -38,10 +52,12 @@ export default function ProducType(props){
         return <div className='Loarder'>Loading...</div>
     }
 
+    console.log(ChangeImage);
+
     function handleClick(){
         navigate("/openproduct", { 
             state: { 
-                imageUrl: image, 
+                imageUrl: ChangeImage, 
                 productTital: name, 
                 productSummary: productSummery, 
                 productPrice: price 
@@ -52,7 +68,7 @@ export default function ProducType(props){
     return(
         <>
             <button className='MainProductButton' onClick={handleClick}>
-                <img src={image} alt="" className='ButtonImage'/>
+                <img src={ChangeImage} alt="" className='ButtonImage'/>
                 <h3>{name}</h3>
                 <h5>{productSummery}</h5>
 
