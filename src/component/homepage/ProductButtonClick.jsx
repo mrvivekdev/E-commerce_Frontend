@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import './ProductButtonClick.css'
 import { ProductLoader } from '../assetsComponent/Loader';
+import urlCreater from '../../function/urlChanger';
 
 export default function ProducType(props){
     const {product} = props;
@@ -32,16 +33,7 @@ export default function ProducType(props){
     }, [product])
 
     useEffect(()=>{
-        if(image){
-            const envServerIp = import.meta.env.VITE_SERVER_IP;
-            const envServerPort = import.meta.env.VITE_SERVER_PORT;
-            const MergeServerConfig = `${envServerIp}${envServerPort}`
-
-            const SpliteImage = image.split("http://localhost:9090")[1];
-            const margeImage = `${MergeServerConfig}${SpliteImage}`;
-            setChangeImage(margeImage)
-        }
-
+        setChangeImage(urlCreater(image));
     }, [image])
 
     if (!product || product.length === 0) {

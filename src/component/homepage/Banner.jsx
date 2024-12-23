@@ -2,6 +2,7 @@ import './Banner.css'
 
 import { ProductLoader } from '../assetsComponent/Loader';
 import { useState, useEffect } from 'react';
+import urlCreater from '../../function/urlChanger';
 
 export default function HomeBanner(props){
     const {banner} = props;
@@ -13,16 +14,7 @@ export default function HomeBanner(props){
     }
 
     useEffect(()=>{
-        if(banner){
-            const envServerIp = import.meta.env.VITE_SERVER_IP;
-            const envServerPort = import.meta.env.VITE_SERVER_PORT;
-            const MergeServerConfig = `${envServerIp}${envServerPort}`
-
-            const SpliteImage = banner.split("http://localhost:9090")[1];
-            const margeImage = `${MergeServerConfig}${SpliteImage}`;
-            setBannerImage(margeImage)
-        }
-
+        setBannerImage(urlCreater(banner));
     }, [banner])
 
     return(
