@@ -1,11 +1,14 @@
 .SearchProductShowBox{
     border: 2px solid black;
+    background-color: white;
     border-radius: 5px;
     height: 25%;
     width: 50%;
     display: flex;
     align-items: center;
     padding: .5%;
+    margin-top: 1%;
+    margin-bottom: 0px;
 }
 
 .ImageDiv{
@@ -73,4 +76,93 @@
     margin: 0px;
     margin-top: 10%;
     margin-bottom: 0px;
+}
+
+.ProductId{
+    display: none;
+}
+
+@media (max-width: 600px){
+    .SearchProductShowBox{
+        border: 2px solid black;
+        border-radius: 5px;
+        height: 25%;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        padding: .5%;
+        margin-top: 3%;
+        margin-bottom: 1%;
+    }
+
+    .ImageDiv{
+        height: 93%;
+        width: 40%;
+        /* border: 1px solid black; */
+        margin-right: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ImageShowBox{
+        height: 100%;
+        width: 100%;
+        border: none;
+        border: none;
+    }
+
+    .ShowBoxInfoDiv{
+        height: 96%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ShowTitel{
+        font-size: 1.9vh;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 100%;
+        height: 30%;
+        overflow: visible;
+        text-overflow: unset;
+        white-space: normal;
+        margin: 0px;
+        margin-top: 3%; 
+    }
+    
+    .ShowSummary{
+        margin: 0px;
+        font-size: 1.4vh;
+        height: 25%;
+        font-weight: 400;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 3%;
+    }
+
+    .ShowPriceDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 20%;
+    }
+
+    .ShowPriceShow{
+        font-size: 2.6vh;
+        margin: 0px;
+        margin-top: 1.5%;
+        margin-bottom: 0px;
+    }
+
+    .ShowDiscountClass{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2.3vh;
+        margin: 0px;
+        margin-top: 10%;
+        margin-bottom: 0px;
+    }
+
+    .ProductId{
+        display: none;
+    }
 }

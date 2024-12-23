@@ -27,9 +27,9 @@ function App() {
       {/* <ProductForm /> */}
       {/* <AccountSetting /> */}
       {/* <OpenProduct /> */}
-      <SearchProducts />
+      {/* <SearchProducts /> */}
 
-      {/* <Routes> 
+      <Routes> 
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/Singup" element={<SignupPage />} />
@@ -38,7 +38,7 @@ function App() {
         <Route path="/accountsetting" element={<AccountSetting />} />
         <Route path="/openproduct" element={<OpenProduct />} />
         <Route path="/searchproducts" element={<SearchProducts />} />
-      </Routes> */}
+      </Routes>
     </>
   )
 }

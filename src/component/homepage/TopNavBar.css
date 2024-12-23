@@ -220,6 +220,7 @@
         justify-content: space-evenly;
         background-color: black;
         color: white;
+        align-items: center;
     }
 
     .MobileMenu .MenuInsideBtn{

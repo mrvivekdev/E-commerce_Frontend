@@ -1,5 +1,5 @@
 .SearchMainDiv{
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -7,3 +7,14 @@
     align-items: center;
 }
 
+@media (max-width: 600px){
+    .SearchMainDiv{
+        height: 133vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        overflow-y: auto;
+    }
+}

@@ -2,23 +2,24 @@ import './SearchBoxs.css'
 
 export default function SearchBoxs(props){
 
-    const {ShowTitel, ShowSummary,ShowPrice,ShowDiscount} = props;
+    const {ShowImage, ShowTitel, ShowSummary, ShowPrice, ShowDiscount, Productid} = props;
 
     return <>
-        <div className='SearchProductShowBox'>
+        <button className='SearchProductShowBox'>
             <div className="ImageDiv">
-                <img src="" alt="" className="ImageShowBox" />
+                <img src={ShowImage} alt="" className="ImageShowBox" />
             </div>
             <div className="ShowBoxInfoDiv">
-                <h3 className='ShowTitel'>Google Pixel 9 Pro XL (Porcelain, 256 GB) (16 GB RAM)</h3>
-                <h5 className='ShowSummary'>Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif Google Pixel 9 Pro XL (Porcelain, 256 GB) (16 GB RAM)</h5>
+                <h3 className='ShowTitel'>{ShowTitel}</h3>
+                <h5 className='ShowSummary'>{ShowSummary}</h5>
 
                 <div className='ShowPriceDiv'>
-                     <h3 className='ShowDiscountClass'>10% Discount</h3>
-                     <h2 className='ShowPriceShow'>₹ 15000</h2>
+                     <h3 className='ShowDiscountClass'>{ShowDiscount}</h3>
+                     <h2 className='ShowPriceShow'>{ShowPrice}</h2>
                 </div>
+                <div className="ProductId">{Productid}</div>
             </div>
-        </div>
+        </button>
     </>
 }
 

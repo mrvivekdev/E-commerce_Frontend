@@ -1,20 +1,27 @@
 import { useEffect, useState, useContext } from 'react';
 import Cookies from 'js-cookie';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 import './TopNavBar.css';
 import { ManageContext } from '../../ContextStateManagement';
 import searchLogo from '../../assets/searchLogo.png';
 import MobileMenu from '../../assets/MobileViewMenu.png'
 
+
 export default function TopNavBar(){
 
     const {stateCookie, setStateCookie, setUserData} = useContext(ManageContext);
+
+    const navigate = useNavigate();
 
     const [displayNoneUser, setDisplayNoneUser] = useState('DisplayFlex');
     const [display, setDisplay] = useState('DisplayNone'); 
     const [mobileMenu, setMobileMenu] = useState('DisplayNone');
     const [cookieCheck, setCookieCheck] = useState(null);
+    const [searchValue, setSearchValue] = useState('');
+    const [Responce, setResponce] = useState(null);
 
     useEffect(()=>{
         const CheckCookies = Cookies.get('uid');
@@ -26,7 +33,6 @@ export default function TopNavBar(){
             setDisplay('DisplayNone')
             setDisplayNoneUser('DisplayFlex')
         }
-
     });
 
     function mobileMenuSatter(){
@@ -42,6 +48,27 @@ export default function TopNavBar(){
         setUserData(null)
         window.location.reload();
     }
+
+    function SearchValueCheck(e){
+        setSearchValue(e.target.value);
+    }
+
+    console.log('search Vallue', searchValue);
+
+    async function HandelSearchApiCAll(){
+        const serachResponce = await axios.post('/api/search/item', {productName: searchValue})
+        if(serachResponce){
+            navigate("/searchproducts", { 
+                state: { 
+                    Results: serachResponce.data.searchResult
+                }
+            });
+        }
+
+        
+    }
+
+    
 
     return (
         <>
@@ -62,8 +89,17 @@ export default function TopNavBar(){
             </div>
            
             <div className='SearchDiv'>
-                <input type="search" placeholder='Search' className='SearchBar' />
-                <button className='SearchBtn'>
+                <input 
+                    type="search" 
+                    placeholder='Search' 
+                    className='SearchBar' 
+                    alue={searchValue} 
+                    onChange={(e)=>{
+                        SearchValueCheck(e)
+                    }}
+                />
+
+                <button className='SearchBtn' onClick={HandelSearchApiCAll}>
                     <img src={searchLogo} alt="search button" className='SearchLogo'/>
                 </button>
             </div>
