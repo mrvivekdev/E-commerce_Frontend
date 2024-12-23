@@ -63,12 +63,8 @@ export default function TopNavBar(){
                     Results: serachResponce.data.searchResult
                 }
             });
-        }
-
-        
+        } 
     }
-
-    
 
     return (
         <>

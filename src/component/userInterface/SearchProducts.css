@@ -3,7 +3,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -13,8 +13,8 @@
         width: 100vw;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
-        /* align-items: center; */
+        justify-content: unset;
+        align-items: center;
         overflow-y: auto;
     }
 }

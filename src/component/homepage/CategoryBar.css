@@ -4,6 +4,7 @@
     user-select: none;
     background-image: none;
     background-color: white;
+    width: 100vw;
 }
 
 h2{
@@ -58,7 +59,7 @@ h2{
         display: flex;
         justify-content: space-evenly;
         height: 170px;
-        width: 98.8vw;
+        width: 98vw;
         margin: 10px;
         overflow-x: auto;
         /* border: 2px solid black; */

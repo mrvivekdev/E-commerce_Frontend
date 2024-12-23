@@ -23,7 +23,7 @@ export default function HomePage(){
     const [cookieSee, setCookieSee] = useState(null);
 
     const postData = {
-        firstType: "Elactronic",
+        firstType: "SmartPhone",
         secondType: "Beauty",
     } 
 
@@ -72,14 +72,13 @@ export default function HomePage(){
         <>
             <div className="MainHomeDiv">
                 <TopNavBar user={User} />
-
                 <HomeBanner 
                     banner={homepageData.bannerimg}
                 />  
                 <Category />
                 <ProducType 
                     propsProduct={firstProductType} 
-                    typeName={"Elactronic"} 
+                    typeName={"Smart Phone"} 
                 />
                 {/* <ProducType secondProduct={secondProductType} /> */}
             </div>
