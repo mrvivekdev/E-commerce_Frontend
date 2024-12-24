@@ -31,6 +31,7 @@ export default function HomePage(){
         async function ApiCall(){
             const responce = await axios.post('/api/homepage/serve', postData);
             setHomepageData(responce.data);
+            // https://e-commerce-backend-seven-ashy.vercel.app/
         } 
 
         ApiCall();
