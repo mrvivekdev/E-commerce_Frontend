@@ -29,23 +29,21 @@ export default function HomePage(){
 
     useEffect(()=>{
         async function ApiCall(){
-            const responce = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/homepage/serve', postData);
+            const responce = await axios.post('/api/homepage/serve', postData);
             setHomepageData(responce.data);
             // https://e-commerce-backend-seven-ashy.vercel.app/
-        } 
+        }   
 
         ApiCall();
         cookieCheck();
     }, [])
 
     useEffect(()=>{
-        if(homepageData && homepageData.FirstProductType){
+        if(homepageData && homepageData.FirstProductType && homepageData.SecondProductFind){
             setFirstProductType(homepageData.FirstProductType);
-        }
-        if(homepageData && homepageData.SecondProductFind){
             setSecondProductType(homepageData.SecondProductFind)
         }
-
+    
         setUserData(homepageData.user)
     }, [homepageData])
 
@@ -81,7 +79,10 @@ export default function HomePage(){
                     propsProduct={firstProductType} 
                     typeName={"Smart Phone"} 
                 />
-                {/* <ProducType secondProduct={secondProductType} /> */}
+                <ProducType 
+                    propsProduct={secondProductType}
+                    typeName={"Beauty"}
+                />
             </div>
         </>    
     )

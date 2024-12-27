@@ -8,6 +8,14 @@ import urlCreater from '../../function/urlChanger';
 export default function ProducType(props){
     const {product} = props;
 
+    if (product === undefined || product === null) {
+        return <ProductLoader />
+    }
+
+    if (!product || product.length === 0 || product === "undefined") {
+        return <ProductLoader />
+    }
+    
     const navigate = useNavigate();
 
     const [id, setId] = useState();
@@ -20,7 +28,7 @@ export default function ProducType(props){
     const [ChangeImage, setChangeImage] = useState();
 
     useEffect(()=>{
-        if(product){
+        if(product !== undefined || product !== null){
             setId(product._id),
             setImage(product.Images),
             setName(product.ProductName),
@@ -35,10 +43,6 @@ export default function ProducType(props){
     useEffect(()=>{
         setChangeImage(urlCreater(image));
     }, [image])
-
-    if (!product || product.length === 0) {
-        return <ProductLoader />
-    }
 
     if (!id || !image || !name || !discount || !price || !type || !productSummery) {
         return <div className='Loarder'>Loading...</div>

@@ -19,16 +19,18 @@ export default function ProducType(props){
     const [dataSaveTen, setDataSaveTen] = useState({})  
     
     useEffect(()=>{
-        setDataSaveOne(propsProduct[0])
-        setDataSaveTwo(propsProduct[1])
-        setDataSaveThree(propsProduct[2])
-        setDataSaveFour(propsProduct[3])
-        setDataSaveFive(propsProduct[4])
-        setDataSaveSix(propsProduct[5])
-        setDataSaveSeven(propsProduct[6])
-        setDataSaveEight(propsProduct[7])
-        setDataSaveNine(propsProduct[8])
-        setDataSaveTen(propsProduct[9])
+        if(propsProduct && typeName){
+            setDataSaveOne(propsProduct[0])
+            setDataSaveTwo(propsProduct[1])
+            setDataSaveThree(propsProduct[2])
+            setDataSaveFour(propsProduct[3])
+            setDataSaveFive(propsProduct[4])
+            setDataSaveSix(propsProduct[5])
+            setDataSaveSeven(propsProduct[6])
+            setDataSaveEight(propsProduct[7])
+            setDataSaveNine(propsProduct[8])
+            setDataSaveTen(propsProduct[9])
+        }
 
     }, [propsProduct])
 
