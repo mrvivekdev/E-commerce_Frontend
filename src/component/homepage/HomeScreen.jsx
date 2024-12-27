@@ -29,7 +29,7 @@ export default function HomePage(){
 
     useEffect(()=>{
         async function ApiCall(){
-            const responce = await axios.post('/api/homepage/serve', postData);
+            const responce = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/homepage/serve', postData);
             setHomepageData(responce.data);
             // https://e-commerce-backend-seven-ashy.vercel.app/
         }   
