@@ -28,9 +28,6 @@ export default function OpenProduct(){
                             {productSummary}
                         </span>
                         <b className="OpenProductTital">₹ {productPrice}</b>
-                        <div className="OpenColorBox">
-                            info adding is coming soon!
-                        </div>
                     </div>
                     <div className="OpenOrderDiv">
                         <b className='OrderInfoB'>No cost EMI starting from ₹11,667/month</b>
