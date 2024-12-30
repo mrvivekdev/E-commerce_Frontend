@@ -11,6 +11,7 @@ import AccountSetting from './component/userInterface/AccountSetting';
 import TopNavBar from './component/homepage/TopNavBar';
 import OpenProduct from './component/userInterface/OpenProduct'
 import SearchProducts from './component/userInterface/SearchProducts';
+import {SmartPhone, Computer, Speaker, SmartWatch, Headphones, Gaming} from './component/userInterface/ProductOpenClick';
 
 function App() {
 
@@ -38,6 +39,14 @@ function App() {
         <Route path="/accountsetting" element={<AccountSetting />} />
         <Route path="/openproduct" element={<OpenProduct />} />
         <Route path="/searchproducts" element={<SearchProducts />} />
+
+        <Route path="/category/SmartPhones" element={<SmartPhone />} />
+        <Route path="/category/Computer" element={<Computer />} />
+        <Route path="/category/Laptop" element={<SearchProducts />} />
+        <Route path="/category/Speaker" element={<Speaker />} />
+        <Route path="/category/SmartWatch" element={<SmartWatch />} />
+        <Route path="/category/Headphones" element={<Headphones />} />
+        <Route path="/category/Gaming" element={<Gaming />} />
       </Routes>
     </>
   )
