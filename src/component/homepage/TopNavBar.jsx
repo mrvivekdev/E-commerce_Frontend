@@ -105,8 +105,6 @@ export default function TopNavBar(){
                     <Link style={{ textDecoration: 'none', color: 'black' }} to="/">Home</Link>
                 </button>
                 <button className={`CartBtn ControlBtn ${display}`}>Cart</button>
-                <button className={`ReturnBtn ControlBtn ${display}`}>Return</button>
-                <button className={`OrderBtn ControlBtn ${display}`}>Orders</button>
                 <button className={`AccountBtn ControlBtn ${display}`} >
                     <Link style={{ textDecoration: 'none', color: 'black'}} to="/accountsetting">Account</Link>
                 </button>
@@ -131,8 +129,6 @@ export default function TopNavBar(){
                 <Link style={{ textDecoration: 'none', color: 'white' }} to="/singup">Singup</Link>
             </button>
             <button className={`MenuInsideBtn ${display}`}>Cart</button>
-            <button className={`MenuInsideBtn ${display}`}>Return</button>
-            <button className={`MenuInsideBtn ${display}`}>Orders</button>
             <button className={`MenuInsideBtn ${display}`} onClick={removeCookie} >Logout</button>
             <button className={`MenuInsideBtn ${display}`} >
                 <Link style={{ textDecoration: 'none', color: 'white'}} to="/accoutn">Account</Link>
