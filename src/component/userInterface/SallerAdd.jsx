@@ -54,7 +54,7 @@ export default function ProductForm(props){
 
         console.log('reaponce data: ',data)
         try {
-            const formSubmit = await axios.post('/api/product/add', data)
+            const formSubmit = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/product/add', data)
             setResponce(formSubmit.data)
 
         } catch (error) {

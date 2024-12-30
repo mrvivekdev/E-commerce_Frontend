@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-import './HomePage.css'
+import './HomePage.css' 
+import Add from '../../assets/Addimage.webp' 
 
 import { PageLoader } from '../assetsComponent/Loader';
 import { ManageContext } from '../../ContextStateManagement';
@@ -10,6 +11,8 @@ import TopNavBar from "./TopNavBar"
 import HomeBanner from './Banner';
 import ProducType from './ProductType'
 import Category from './CategoryBar';
+import AddImage from './AddImage';
+import Fotter from './Fotter'
 
 
 export default function HomePage(){
@@ -79,10 +82,12 @@ export default function HomePage(){
                     propsProduct={firstProductType} 
                     typeName={"Smart Phone"} 
                 />
+                <AddImage img={Add}/>
                 <ProducType 
                     propsProduct={secondProductType}
                     typeName={"Beauty"}
                 />
+                <Fotter />
             </div>
         </>    
     )

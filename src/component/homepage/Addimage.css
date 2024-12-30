@@ -1,0 +1,28 @@
+.MainAddImageDiv{
+    height: 30vw;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.MainAddImageDiv img{
+    height: 100%;
+    width: 70%;
+}
+
+@media (max-width: 600px){
+    .MainAddImageDiv{
+        height: 50vw;
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .MainAddImageDiv img{
+        height: 100%;
+        width: 100%;
+    }
+}

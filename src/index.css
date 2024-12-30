@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 .MainLoader{
@@ -13,6 +14,12 @@ body{
 }
 
 @media (max-width: 600px){
+    body{
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+    
     h2{
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 1500;    

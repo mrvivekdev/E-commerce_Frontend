@@ -1,0 +1,17 @@
+.FotterMainDiv{
+    width: 100%;
+    height: 15vh;
+    background-color: #aaaaaa;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.FotterMainDiv p{
+    font-size: large;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

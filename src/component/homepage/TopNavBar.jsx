@@ -56,7 +56,7 @@ export default function TopNavBar(){
     console.log('search Vallue', searchValue);
 
     async function HandelSearchApiCAll(){
-        const serachResponce = await axios.post('/api/search/item', {productName: searchValue})
+        const serachResponce = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/search/item', {productName: searchValue})
         if(serachResponce){
             navigate("/searchproducts", { 
                 state: { 

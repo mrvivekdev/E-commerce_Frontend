@@ -36,7 +36,7 @@ export default function SignupPage(){
     async function HandelApiCall(){
         if(displayNone === 'DisplayNone'){
             try {
-                const responce = await axios.post('/api/user/singup', dataForm);
+                const responce = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/user/singup', dataForm);
                 setResponceData(responce.data);
  
             } catch (error) {

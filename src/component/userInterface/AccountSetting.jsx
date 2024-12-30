@@ -55,7 +55,7 @@ export default function AccountSetting(){
 
     async function HandelInfoUpdate(){
         try {
-            const response = await axios.post("/api/user/update", {
+            const response = await axios.post("https://e-commerce-backend-seven-ashy.vercel.app/api/user/update", {
                 fullname: updateFullname,
                 phonenumber: updatePhonenumber
             })
