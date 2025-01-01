@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import "./AccountSetting.css"
 import TopNavBar from "../homepage/TopNavBar"
 import { ManageContext } from '../../ContextStateManagement';
+import { PageLoader } from '../assetsComponent/Loader'
 
 
 export default function AccountSetting(){
@@ -21,8 +22,9 @@ export default function AccountSetting(){
     const [updatePhonenumber, setUpdatePhonenumber] = useState();
     const [serverData, setServerData] = useState({});
 
+    console.log(userData);
     if(!userData){
-        return (<ProductLoader />)
+        return (<PageLoader />)
     }
 
     // Changing delivery information

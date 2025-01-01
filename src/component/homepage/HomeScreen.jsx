@@ -13,6 +13,7 @@ import ProducType from './ProductType'
 import Category from './CategoryBar';
 import AddImage from './AddImage';
 import Fotter from './Fotter'
+import { Meta } from 'react-router-dom';
 
 
 export default function HomePage(){
@@ -23,23 +24,24 @@ export default function HomePage(){
     const [homepageData, setHomepageData] = useState({});
     const [firstProductType, setFirstProductType] = useState([]);
     const [secondProductType, setSecondProductType] = useState({});
-    const [cookieSee, setCookieSee] = useState(null);
-
-    const postData = {
-        firstType: "SmartPhone",
-        secondType: "Beauty",
-    } 
+    const [cookieSee, setCookieSee] = useState();
 
     useEffect(()=>{
+        const postData = {
+            cookie: cookieSee,
+            firstType: "SmartPhone",
+            secondType: "Beauty",
+        } 
+
         async function ApiCall(){
-            const responce = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/homepage/serve', postData);
+            const responce = await axios.post(`${import.meta.env.VITE_SERVER_API}/api/homepage/serve`, postData, { withCredentials: true });
             setHomepageData(responce.data);
             // https://e-commerce-backend-seven-ashy.vercel.app/
         }   
 
         ApiCall();
         cookieCheck();
-    }, [])
+    }, [cookieSee])
 
     useEffect(()=>{
         if(homepageData && homepageData.FirstProductType && homepageData.SecondProductFind){
@@ -47,6 +49,7 @@ export default function HomePage(){
             setSecondProductType(homepageData.SecondProductFind)
         }
     
+        console.log(homepageData)
         setUserData(homepageData.user)
     }, [homepageData])
 

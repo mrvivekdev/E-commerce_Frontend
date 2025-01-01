@@ -67,6 +67,7 @@
 .LoginMainDiv .LoginpDiv button:hover{
     border: 2px solid black;
     font-size: 22px;
+    cursor: pointer;
 }
 
 .AlreadyAccount{

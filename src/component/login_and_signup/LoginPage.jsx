@@ -23,7 +23,7 @@ export default function LoginPage(){
 
     async function HandelApiCall(){
         try {
-            const responce = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/user/login', dataForm);
+            const responce = await axios.post(`${import.meta.env.VITE_SERVER_API}/api/user/login`, dataForm);
             setResponceData(responce.data);
 
         } catch (error) {
@@ -37,8 +37,12 @@ export default function LoginPage(){
     }       
 
     if (responceData.transport === "OtpPage") {
-        // console.log(responceData)
-        Cookies.set('uid', responceData.cookie);  
+        console.log(responceData)
+        Cookies.set('uid', responceData.cookie, {
+            sameSite: 'Lax',
+            secure: false, 
+            path: '/',
+        });  
         return <OtpPage /> 
     }
 

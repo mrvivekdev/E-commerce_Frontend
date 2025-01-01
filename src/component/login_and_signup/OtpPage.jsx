@@ -20,7 +20,7 @@ export default function LoginPage(){
 
     async function HandelApiCall(){
         try {
-            const responce = await axios.post('https://e-commerce-backend-seven-ashy.vercel.app/api/user/otp', {otp: dataForm.otp});
+            const responce = await axios.post(`${import.meta.env.VITE_SERVER_API}/api/user/otp`, {otp: dataForm.otp});
             setResponceData(responce.data);
 
         } catch (error) {

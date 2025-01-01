@@ -131,7 +131,7 @@ export default function TopNavBar(){
             <button className={`MenuInsideBtn ${display}`}>Cart</button>
             <button className={`MenuInsideBtn ${display}`} onClick={removeCookie} >Logout</button>
             <button className={`MenuInsideBtn ${display}`} >
-                <Link style={{ textDecoration: 'none', color: 'white'}} to="/accoutn">Account</Link>
+                <Link style={{ textDecoration: 'none', color: 'white'}} to="/accountsetting">Account</Link>
             </button>
         </div>
 
