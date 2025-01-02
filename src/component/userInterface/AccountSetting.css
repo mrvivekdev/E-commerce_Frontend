@@ -132,3 +132,93 @@
     border: 2px solid black;
     border-radius: 7px;
 }
+
+@media (max-width: 600px){
+    .DeliveryInfo{
+        display: flex;
+        flex-direction: column;
+        height: 45vh;
+        width: 90vw;
+        padding: 5px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 0px;
+        margin-bottom: 1%;
+        border: 2px solid black;
+        border-radius: 7px;
+    }
+    .PaymentInfo{
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+        width: 90vw;
+        padding: 5px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 0px;
+        margin-bottom: 1%;
+        border: 2px solid black;
+        border-radius: 7px;
+    }
+   .BasicInfo{
+        display: flex;
+        flex-direction: column;
+        height: 32.1vh;
+        width: 90vw;
+        padding: 5px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 0px;
+        margin-bottom: 1%;
+        border: 2px solid black;
+        border-radius: 7px;
+   } 
+   .InfoP{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.5vh;
+        font-weight: 600;
+        font-style: italic;
+        color: rgba(71, 66, 66, 0.822);
+        margin: 5px;
+        /* margin-left: 2%; */
+        margin-bottom: 0px;  
+    }
+
+    .BasicInfo .InfoStar{
+        font-weight: 200;
+        font-size: small;
+        color: black;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-left: 2%;
+    }
+
+    .BasicInfo .SpaceInfo{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 2%;
+    }
+    
+    .InputChange{
+        height: 5%;
+        width: 90%;
+        /* margin: 15px; */
+        margin-left: 2%;
+        padding: 5px;
+        color: black;
+        font-weight: 500;
+        font-size: 17px;
+        border: 1px solid black;
+        border-radius: 1px;
+    }
+    .ChangeBtn{
+        height: 50px;
+        width: 150px;
+        margin-top: 1%;
+        margin-left: 30%;
+        color: black;
+        background-color: (71, 66, 66, 0.822);
+        border: 1px solid black;
+    }
+    
+}
